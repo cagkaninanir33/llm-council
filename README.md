@@ -85,3 +85,13 @@ Then open http://localhost:5173 in your browser.
 - **Frontend:** React + Vite, react-markdown for rendering
 - **Storage:** JSON files in `data/conversations/`
 - **Package Management:** uv for Python, npm for JavaScript
+
+
+## Command line
+
+Run the council without the web UI (needs `OPENROUTER_API_KEY` in `.env`):
+
+```bash
+python council_cli.py "Your question"          # final answer + aggregate ranking
+python council_cli.py --json --file q.txt      # full stages as JSON
+```
